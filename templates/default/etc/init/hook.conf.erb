@@ -1,0 +1,7 @@
+start on runlevel [2345]
+stop on runlevel [!2345]
+
+setgid root
+setuid root
+
+exec /usr/local/<%= @name %> -port <%= @port %> -config <%= @conf_dir %> >> <%= @log %>
